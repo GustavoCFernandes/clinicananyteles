@@ -259,7 +259,7 @@ h6 {
     padding-top: 120px;
     /* offset for fixed header */
     padding-bottom: 3rem;
-    min-height: 90vh;
+    min-height: 75vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -288,7 +288,7 @@ h6 {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     color: #666;
-    max-width: 60%;
+    max-width: 50%;
 }
 
 .hero-features {
@@ -976,7 +976,6 @@ h6 {
     background-position: center;
     background-repeat: no-repeat;
 
-    
 }
 
     .hero-container {
