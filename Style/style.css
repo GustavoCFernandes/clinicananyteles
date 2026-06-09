@@ -259,7 +259,7 @@ h6 {
     padding-top: 120px;
     /* offset for fixed header */
     padding-bottom: 3rem;
-    min-height: 80vh;
+    min-height: 90vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -294,7 +294,8 @@ h6 {
 .hero-features {
     background-color: transparent;
     padding: 0;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .features-container {
@@ -969,6 +970,15 @@ h6 {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .hero {
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
+}
+
     .hero-container {
         grid-template-columns: 1fr;
         text-align: left;
@@ -1055,13 +1065,19 @@ h6 {
 
 
 /* hero mobile icones */
- 
+  .hero-mobile-icons{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    padding: 0% 2%;
+
+ }
 
 @media (max-width: 750px) {
 
     .hero-features {
         display: block; /* remove o display:none */
-        margin-top: 2rem;
+        
     }
 
     .features-container {
@@ -1081,7 +1097,7 @@ h6 {
 
         max-width: none;
 
-        gap: 0.4rem;
+       
     }
 
     .feature-item i {
