@@ -259,12 +259,13 @@ h6 {
     padding-top: 120px;
     /* offset for fixed header */
     padding-bottom: 3rem;
-    min-height: 100vh;
+    min-height: 80vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    
 }
 
 .hero-container {
@@ -287,6 +288,7 @@ h6 {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     color: #666;
+    max-width: 60%;
 }
 
 .hero-features {
@@ -321,6 +323,7 @@ h6 {
     font-size: 0.8rem;
     font-weight: 500;
 }
+
 
 /* ==========================================================================
    Procedimentos
@@ -1049,32 +1052,35 @@ h6 {
     }
 }
 
+
+
+/* hero mobile icones */
+ 
+
 @media (max-width: 750px) {
 
-    .hero {
-        min-height: 40vh;
-        padding-top: 100px;
-        padding-bottom: 2rem;
-
-        align-items: flex-start;
-
-        background-size: cover;
-        background-position: center;
-    }
-
-
-
     .hero-features {
+        display: block; /* remove o display:none */
         margin-top: 2rem;
     }
 
     .features-container {
+        display: flex;
+
         justify-content: center;
+
+        align-items: flex-start;
+
+        flex-wrap: wrap; /* desce quando não couber */
+
         gap: 1rem;
     }
 
     .feature-item {
-        max-width: 70px;
+        width: calc(33.33% - 1rem);
+
+        max-width: none;
+
         gap: 0.4rem;
     }
 
