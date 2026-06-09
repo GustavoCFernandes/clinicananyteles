@@ -1,119 +1,381 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Em Manutenção | Clínica Nany Teles</title>
+    <title>Clínica Nany Teles Estética Avançada</title>
+    <meta name="description" content="Cuidado, tecnologia e ciência para resultados naturais e sofisticados.">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0E0E0E;
-            --text-main: #F6F2EF;
-            --accent: #9C7144; /* Premium gold/brown */
-        }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-        .container {
-            text-align: center;
-            padding: 2rem;
-            z-index: 10;
-            position: relative;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: fadeInDown 1s ease-out;
-        }
-
-        p {
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: #aaaaaa;
-            margin-bottom: 2.5rem;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        .loader {
-            width: 40px;
-            height: 40px;
-            border: 3px solid rgba(156, 113, 68, 0.2);
-            border-radius: 50%;
-            border-top-color: var(--accent);
-            animation: spin 1s ease-in-out infinite, fadeIn 1s ease-out 0.6s both;
-            margin: 0 auto;
-        }
-
-        /* Subtle background effects */
-        .bg-glow {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(156, 113, 68, 0.12) 0%, rgba(14, 14, 14, 0) 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            pointer-events: none;
-            animation: pulse 4s ease-in-out infinite alternate;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes pulse {
-            0% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.8); }
-            100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            p { font-size: 1rem; }
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="Style/style.css">
 </head>
+
 <body>
-    <div class="bg-glow"></div>
-    <div class="container">
-        <h1>Em Manutenção</h1>
-        <p>Estamos preparando uma nova experiência para você. Voltaremos em breve.</p>
-        <div class="loader"></div>
-    </div>
+
+    <!-- 1. Topo / Header (Sticky) -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo"><img src="img/Logo_home.png" alt="Clínica Nany Teles Estética Avançada"
+                    class="logo-img"></a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <i class="ph ph-list"></i>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#procedimentos">Procedimentos</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <a href="https://wa.me/5511921551465" class="btn btn-primary nav-btn" target="_blank">Agendar Avaliação
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Banner Principal / Hero -->
+        <section class="hero" id="home"
+            style="background-image: linear-gradient(to right, rgba(253, 251, 244, 0.7) 0%, rgba(253, 251, 244, 0) 60%), url('img/banner_home.jpg');">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Realce sua <br><em>melhor versão</em></h1>
+                    <p>Cuidado, tecnologia e ciência para resultados naturais e sofisticados.</p>
+                    <a href="https://wa.me/5511921551465" class="btn btn-primary" target="_blank">Agendar Avaliação</a>
+
+                    <div class="hero-features">
+                        <div class="features-container">
+                            <div class="feature-item"><i class="ph ph-user-focus"></i><span>Atendimento
+                                    personalizado</span></div>
+                            <div class="feature-item"><i class="ph ph-cpu"></i><span>Tecnologia avançada</span></div>
+                            <div class="feature-item"><i class="ph ph-users"></i><span>Profissionais
+                                    especializados</span></div>
+                            <div class="feature-item"><i class="ph ph-drop"></i><span>Resultados naturais</span></div>
+                            <div class="feature-item"><i class="ph ph-shield-check"></i><span>Segurança e
+                                    confiança</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Procedimentos em Destaque -->
+        <section class="procedimentos-destaque" id="procedimentos">
+            <div class="container">
+                <h2 class="section-title">Procedimentos para o seu melhor</h2>
+                <div class="grid-3">
+                    <!-- Cards de Procedimentos. Os 12 listados (exemplo com 3 para não ficar imenso, depois multiplicamos ou deixamos 6 de destaque) -->
+                    <!-- A instrução diz "Grid de 3 colunas de cards limpos." e fala em 12, vamos colocar 6 representativos para não poluir ou todos 12. -->
+                    <div class="card-procedimento">
+                        <div class="card-img-wrap">
+                            <img src="img/rocedimentos/Harmonização_facial.jpg" alt="Harmonização Facial"
+                                loading="lazy">
+                        </div>
+                        <h3>Harmonização Facial</h3>
+                        <a href="#contato" class="btn btn-outline">Saiba mais</a>
+                    </div>
+                    <div class="card-procedimento">
+                        <div class="card-img-wrap">
+                            <img src="img/rocedimentos/Blefaroplastia.jpg" alt="Blefaroplastia" loading="lazy">
+                        </div>
+                        <h3>Blefaroplastia</h3>
+                        <a href="#contato" class="btn btn-outline">Saiba mais</a>
+                    </div>
+                    <div class="card-procedimento">
+                        <div class="card-img-wrap">
+                            <img src="img/rocedimentos/hidrolipo.jpg" alt="Fios de PDO" loading="lazy">
+                        </div>
+                        <h3>Fios de PDO</h3>
+                        <a href="#contato" class="btn btn-outline">Saiba mais</a>
+                    </div>
+                    <div class="card-procedimento">
+                        <div class="card-img-wrap">
+                            <img src="img/rocedimentos/Gluteo.jpg" alt="Glúteo Max" loading="lazy">
+                        </div>
+                        <h3>Glúteo Max</h3>
+                        <a href="#contato" class="btn btn-outline">Saiba mais</a>
+                    </div>
+                    <div class="card-procedimento">
+                        <div class="card-img-wrap">
+                            <img src="img/rocedimentos/Bioestimulador.jpg" alt="Bioestimuladores" loading="lazy">
+                        </div>
+                        <h3>Bioestimuladores</h3>
+                        <a href="#contato" class="btn btn-outline">Saiba mais</a>
+                    </div>
+                    <div class="card-procedimento">
+                        <div class="card-img-wrap">
+                            <img src="img/rocedimentos/Injetaveis_faciais.png" alt="Injetáveis Faciais" loading="lazy">
+                        </div>
+                        <h3>Injetáveis Faciais</h3>
+                        <a href="#contato" class="btn btn-outline">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sobre a Clínica -->
+        <section class="sobre" id="sobre">
+            <div class="sobre-banner">
+                <img src="img/conheça_.png" alt="Clínica Nany Teles" class="sobre-banner-img">
+                <div class="sobre-overlay"></div>
+                <div class="container sobre-content-wrap">
+                    <div class="sobre-content">
+                        <h2 class="section-title left-align">Aqui, cada detalhe é pensado para você.</h2>
+                        <p>Ambiente acolhedor, equipamentos de ponta e protocolos exclusivos para transformar autoestima
+                            em confiança.</p>
+                        <a href="#contato" class="btn btn-primary">Conheça nossa clínica</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Nossa História -->
+        <section class="historia">
+            <div class="container historia-container">
+                <h2 class="section-title">Nossa História</h2>
+                <p class="historia-text">A Nany Teles Estética Avançada nasceu do sonho de transformar vidas através do
+                    cuidado com propósito. Unimos tecnologia, ciência, técnica e protocolos exclusivos para entregar
+                    resultados reais, seguros e personalizados.</p>
+                <div class="historia-destaques">
+                    <div class="destaque"><i class="ph ph-cpu"></i><span>Tecnologia</span></div>
+                    <div class="destaque"><i class="ph ph-flask"></i><span>Ciência</span></div>
+                    <div class="destaque"><i class="ph ph-yin-yang"></i><span>Harmonia</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Diferenciais que Transformam -->
+        <section class="diferenciais">
+            <div class="container">
+                <h2 class="section-title sr-only">Diferenciais que Transformam</h2>
+                <div class="grid-4x2">
+                    <div class="diff-card"><i class="ph ph-star"></i><span>Atendimento exclusivo</span></div>
+                    <div class="diff-card"><i class="ph ph-cpu"></i><span>Tecnologia avançada</span></div>
+                    <div class="diff-card"><i class="ph ph-users"></i><span>Equipe especializada</span></div>
+                    <div class="diff-card"><i class="ph ph-house-line"></i><span>Ambiente premium</span></div>
+                    <div class="diff-card"><i class="ph ph-sliders-horizontal"></i><span>Protocolos
+                            personalizados</span></div>
+                    <div class="diff-card"><i class="ph ph-shield-check"></i><span>Segurança e excelência</span></div>
+                    <div class="diff-card"><i class="ph ph-drop"></i><span>Resultados naturais</span></div>
+                    <div class="diff-card"><i class="ph ph-heart"></i><span>Atendimento humanizado</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Tecnologias que Transformam -->
+        <section class="tecnologias" id="tecnologias">
+            <div class="container">
+                <h2 class="section-title center">Tecnologias que Transformam</h2>
+                <div class="grid-8">
+                    <a href="#" class="tech-card"><span>Lavieen</span></a>
+                    <a href="#" class="tech-card"><span>Ultraformer MPT</span></a>
+                    <a href="#" class="tech-card"><span>Endolaser</span></a>
+                    <a href="#" class="tech-card"><span>Microagulhamento</span></a>
+                    <a href="#" class="tech-card"><span>Bioestimuladores</span></a>
+                    <a href="#" class="tech-card"><span>Injetáveis</span></a>
+                    <a href="#" class="tech-card"><span>Enzimas</span></a>
+                    <a href="#" class="tech-card"><span>Hidrolipo</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Resultados que Inspiram -->
+        <section class="resultados" id="resultados">
+            <div class="container">
+                <div class="resultados-header">
+                    <div>
+                        <h2 class="section-title left-align">Resultados que inspiram</h2>
+                        <p>Veja antes e depois reais de quem já transformou sua autoestima.</p>
+                    </div>
+                </div>
+
+                <div class="carrossel-container">
+                    <div class="carrossel" id="carrossel-resultados">
+                        <div class="carrossel-item">
+                            <img src="img/Antes_Depois/01.jpg" alt="Antes e Depois 1" loading="lazy"
+                                class="carrossel-img">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="img/Antes_Depois/02.jpg" alt="Antes e Depois 2" loading="lazy"
+                                class="carrossel-img">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="img/Antes_Depois/03.jpg" alt="Antes e Depois 3" loading="lazy"
+                                class="carrossel-img">
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="img/Antes_Depois/04.jpg" alt="Antes e Depois 4" loading="lazy"
+                                class="carrossel-img">
+                        </div>
+                    </div>
+                    <button class="carrossel-btn prev"><i class="ph ph-caret-left"></i></button>
+                    <button class="carrossel-btn next"><i class="ph ph-caret-right"></i></button>
+                </div>
+                <p class="resultados-disclaimer">Resultados Individuais. Cada organismo responde de forma única ao
+                    tratamento.</p>
+            </div>
+        </section>
+
+        <!-- 10. Agendamento / WhatsApp -->
+        <section class="agendamento-bloco" id="contato">
+            <div class="container">
+                <div class="agendamento-content">
+                    <h2 class="section-title">Agende sua avaliação via WhatsApp</h2>
+                    <p class="phone-number">(11) 92155-1465</p>
+                    <a href="https://wa.me/5511921551465" class="btn btn-primary lg" target="_blank"><i
+                            class="ph-fill ph-whatsapp-logo"></i> Falar no WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11 e 12. Localização e Horário -->
+        <section class="localizacao-horario">
+            <div class="container grid-2">
+                <div class="info-card">
+                    <i class="ph ph-map-pin"></i>
+                    <h3>Localização</h3>
+                    <p>R. Dr. César, 530 - Santana<br>São Paulo - SP | CEP 02013-002<br>Salas 1407 / 1408</p>
+                </div>
+                <div class="info-card">
+                    <i class="ph ph-clock"></i>
+                    <h3>Horário de Atendimento</h3>
+                    <ul>
+                        <li>Segunda a sexta: 10h às 20h</li>
+                        <li>Sábado: 10h às 16h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container map-container">
+                <!-- Google Maps Embed Placeholder -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.625895318683!2d-46.62768008436662!3d-23.51000628470876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5882613b5e43%3A0xcabf35a065fbd692!2sR.%20Dr.%20C%C3%A9sar%2C%20530%20-%20Santana%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002013-002!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- 13. FAQ (Accordion) -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <h2 class="section-title center">Dúvidas Frequentes</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Preciso passar por avaliação antes do procedimento? <i
+                                class="ph ph-caret-down"></i></button>
+                        <div class="accordion-content">
+                            <p>Sim, a avaliação é essencial para entendermos suas necessidades e montarmos um protocolo
+                                personalizado e seguro para você.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Os procedimentos são seguros? <i
+                                class="ph ph-caret-down"></i></button>
+                        <div class="accordion-content">
+                            <p>Todos os nossos procedimentos são realizados por profissionais altamente qualificados,
+                                utilizando tecnologias aprovadas e seguindo rigorosos protocolos de segurança.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Em quanto tempo vejo resultado? <i
+                                class="ph ph-caret-down"></i></button>
+                        <div class="accordion-content">
+                            <p>O tempo varia de acordo com o procedimento e o organismo de cada paciente. Durante a
+                                avaliação, alinhamos todas as expectativas.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">A clínica atende homens e mulheres? <i
+                                class="ph ph-caret-down"></i></button>
+                        <div class="accordion-content">
+                            <p>Sim! Atendemos a todos que buscam realçar sua beleza e investir no autocuidado com
+                                segurança e resultados naturais.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Como funciona o agendamento? <i
+                                class="ph ph-caret-down"></i></button>
+                        <div class="accordion-content">
+                            <p>O agendamento é feito de forma rápida e prática pelo nosso WhatsApp. Nossa equipe ajudará
+                                a encontrar o melhor horário para você.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Quais formas de pagamento são aceitas? <i
+                                class="ph ph-caret-down"></i></button>
+                        <div class="accordion-content">
+                            <p>Aceitamos cartões de crédito, débito e PIX. Temos condições especiais que podem ser
+                                consultadas no momento do agendamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 14. Rodapé (Footer) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo"><img src="img/Logo_home.png" alt="Clínica Nany Teles Estética Avançada"
+                        class="logo-img footer-logo-img"></a>
+                <a  class="footer-grid-logo">
+                        <p>Tecnologia, ciência e harmonia para realçar sua melhor versão.</p>
+               </a>
+               
+            </div>
+
+            <div class="footer-links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#procedimentos">Procedimentos</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="https://wa.me/5511921551465"><i class="ph ph-whatsapp-logo"></i> WhatsApp</a></li>
+                    <li><a href="#"><i class="ph ph-instagram-logo"></i> Instagram</a></li>
+                    <li><i class="ph ph-map-pin"></i> R. Dr. César, 530 — Santana</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Clínica Nany Teles Estética Avançada. Todos os direitos reservados. |
+                www.clinicananyteles.com.br</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511921551465" class="floating-whatsapp" target="_blank" aria-label="Agendar via WhatsApp">
+        <div class="pulse-ring"></div>
+        <i class="ph-fill ph-whatsapp-logo"></i>
+        <span class="tooltip">Agendar Avaliação</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
