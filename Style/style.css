@@ -1049,7 +1049,20 @@ h6 {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
+
+    .hero {
+        min-height: 40vh;
+        padding-top: 100px;
+        padding-bottom: 2rem;
+
+        align-items: flex-start;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+
 
     .hero-features {
         margin-top: 2rem;
