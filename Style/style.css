@@ -72,7 +72,7 @@ h6 {
 .section-title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    text-align: left
+    text-align: center
 }
 
 .section-title.left-align {
@@ -573,10 +573,11 @@ h6 {
 
 .resultados-header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: center;
     margin-bottom: 3rem;
+    text-align: center;
 }
+
 
 .carrossel-container {
     position: relative;
